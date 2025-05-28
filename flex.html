@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layouts</title>
+    <script src="https://kit.fontawesome.com/f91beb4b3d.js" crossorigin="anonymous"></script>
+    <style>
+        h2::after{
+            content: '2nd-child';
+            font-size: 12px;
+            color: rgb(8, 214, 8);
+            background-color: rgb(1, 29, 29);
+            border-radius: 5px;
+            border: none;
+        }
+        h3::after{
+            content: '1st-child';
+            font-size: 12px;
+            color: rgb(8, 214, 8);
+            background-color: rgb(1, 29, 29);
+            border-radius: 5px;
+            border: none;
+        }
+        h4::after{
+            content: '3rd-child';
+            font-size: 12px;
+            color: rgb(8, 214, 8);
+            background-color: rgb(1, 29, 29);
+            border-radius: 5px;
+            border: none;
+        }
+        h5::after{
+            content: '4th-child';
+            font-size: 12px;
+            color: rgb(8, 214, 8);
+            background-color: rgb(1, 29, 29);
+            border-radius: 5px;
+            border: none;
+        }
+        h6::after{
+            content: '5tth-child';
+            font-size: 12px;
+            color: rgb(8, 214, 8);
+            background-color: rgb(1, 29, 29);
+            border-radius: 5px;
+            border: none;
+        }
+        h1{
+            color: rgb(4, 106, 119);
+            font-size: 26px;
+        }
+        h2{
+            color: rgb(4, 106, 119);
+            font-size: 26px;  
+        }
+        h3{
+            color: rgb(4, 106, 119);
+            font-size: 26px;  
+        }
+        h4{
+            color: rgb(4, 106, 119);
+            font-size: 26px; 
+        }
+        h5{
+            color: rgb(4, 106, 119);
+            font-size: 26px; 
+        }
+        h6{
+            color: rgb(4, 106, 119);
+            font-size: 26px; 
+        }
+        .name{
+            width: 90%;
+            height: 650px;
+            background-image: url(home/home.jpg);
+            background-image: cover;
+            background-repeat: no-repeat;
+            margin-top: 30px;
+            border-radius: 25px;
+        }
+        .family{
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            margin-top: 120px;
+        }
+        h1::first-letter{
+            font-size: 2em;
+            color: rgb(224, 202, 4);
+        }
+        .about{
+            display: flex;
+            gap: 110px;
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        .log{
+            margin-top: 30px;
+            margin-right: 30px;
+        }
+        .about a{
+            text-decoration: none;
+            font-size: 32px;
+            color: orangered;
+            font-weight: bold;
+            background-color: rgb(58, 38, 13);
+            border-radius: 5px;
+        }
+        .about a:hover{
+            color: green;
+            background-color: black;
+        }
+        .log a:hover{
+            color: rgb(77, 43, 3);
+            background-color: cadetblue;
+        }
+        .log a{
+            text-decoration: none;
+            font-size: 32px;
+            color: rgb(85, 2, 20);
+            font-weight: bold;
+            background-color: rgb(4, 78, 78);
+            border-radius: 5px;
+        }
+        .navigate{
+            display: flex;
+            justify-content: space-between;
+        }
+        .box{
+            border: 2px solid green;
+            background-color: burlywood;
+            padding: 20px;
+            height: 30px;
+            width: 50px;
+        }
+        .container{
+            display: flex;
+            width: 850px;
+            height: 300px;
+            padding: 20px;
+            gap: 5px;
+            background-color: cadetblue;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            border-radius: 30px;
+        }
+        .orange-box{
+            margin-top: 50px;
+            width: 90vw;
+            margin-left: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 50px;
+        }
+        .total{
+            font-size: 32px;
+            color: aliceblue;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-color: rgb(51, 56, 56);
+            border-radius: 15px;
+        }
+        .total:hover{
+            color: green;
+            background-color: gray;
+        }
+        .product{
+            border: 2px solid aliceblue;
+            display: flex;
+            height: 120px;
+            width: 150px;
+            border-radius: 10px;
+            background-color: cadetblue;
+            font-size: 24px;
+            color: aliceblue;
+            justify-content: ;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+        .products{
+            display: flex;
+            flex-wrap: wrap;
+            width: 80vw;
+            height: 300px;
+            margin-left: 50px;
+            background-color: bisque;
+            border-radius: 20px;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .package{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1150px;
+        }
+        .of{
+            font-size: 32px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            background-color: black;
+            color: aliceblue;
+            border-radius: 10px;
+        }
+        .of:hover{
+            color: rgb(6, 158, 228);
+            background-color: gray;
+        }
+        .product-list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }  
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navigate">
+            <div class="about">
+                <a href="">Information</a><a href="">About</a><a href="">Home</a>
+            </div>
+            <div class="log">
+                <a href="">Login</a>
+            </div>
+        </nav>
+    </header>
+    <div class="family">
+        <div class="name"><i style="font-size: 45px; color: goldenrod; margin-top: 30px;" class="fa-solid fa-house-chimney-window"></i>
+            <h1><i class="fa-solid fa-people-group"></i> <u>My Family Members.</u></h1>
+            <h1>My father name is Sahabuddin Khondokar. My mother name is Marjahan Begum.</h1><i style="font-size: 35px; color: crimson;" class="fa-solid fa-hands-holding-child"></i>
+            <h2><i style="color: rgb(88, 2, 114);" class="fa-solid fa-hand-fist"></i> My yelder brother name is Opu Khondokar.</h2>
+            <h3><i style="color: rgb(88, 2, 114);" class="fa-solid fa-hand-fist"></i> My elder sister name is Sharmin Jahan Shuborna.</h3>
+            <h4><i style="color: rgb(88, 2, 114);" class="fa-solid fa-hand-fist"></i> My name is Tuhin Khondokar.</h4>
+            <h5><i style="color: rgb(88, 2, 114);" class="fa-solid fa-hand-fist"></i> My younger brother name is Shakhawath Hossain Tushar Khondokar.</h5>
+            <h6><i style="color: rgb(88, 2, 114);" class="fa-solid fa-hand-fist"></i> My another younger brother name is Turab Khondokar.</h6>
+            </div>
+    </div>
+    <div class="orange-box">
+        <div class="total"><i style="font-size: 32px; color: rgb(52, 85, 2);" class="fa-brands fa-wolf-pack-battalion"></i> Total box of orange:-</div>
+        <div class="container">
+            <div class="box">Orange1</div>
+            <div class="box">Orange2</div>
+            <div class="box">Orange3</div>
+            <div class="box">Orange4</div>
+            <div class="box">Orange5</div>
+            <div class="box">Orange6</div>
+            <div class="box">Orange7</div>
+            <div class="box">Orange8</div>
+            <div class="box">Orange9</div>
+            <div class="box">Orange10</div>
+            <div class="box">Orange11</div>
+            <div class="box">Orange12</div>
+            <div class="box">Orange13</div>
+            <div class="box">Orange14</div>
+            <div class="box">Orange15</div>
+            <div class="box">Orange16</div>
+            </div>
+    </div>
+    <div class="product-list">
+        <div class="package">
+            <p class="of"><i style="font-size: 32px; color: brown;" class="fa-brands fa-product-hunt"></i> package of varient products:-</p>
+            <div class="products">
+            <div class="product">Three apple watch</div>
+            <div class="product">One Iphone 16pro max</div>
+            <div class="product">One pervert cap</div>
+            <div class="product">One guchi sunglass</div>
+            <div class="product">Some addidas shorts</div>
+            <div class="product">Some puma sports shoes</div>
+            <div class="product">Some air jordan sneakers</div>
+            <div class="product">Some nike slim t-shirts</div>
+            <div class="product">Air jordan sports pants 6 peace</div>
+            <div class="product">Jacob & co watch car engine version</div>
+            </div>
+            </div>
+    </div>
+</body>
+</html>
