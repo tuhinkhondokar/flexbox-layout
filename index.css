@@ -1,0 +1,33 @@
+.form-tank{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+.form-container{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 50%;
+}
+.form-container input{
+    padding: 20px;
+    background-color: bisque;
+}
+input:focus{
+    outline: 0;
+    color: rgb(8, 228, 173);
+    border: 3px solid gray;
+    font-size: 24px;
+}
+.form-container button{
+    padding: 20px;
+    background-color: black;
+    color: aliceblue;
+}
+.form-container button:hover{
+    background-color: cadetblue;
+    font-size: 24px;
+    font-weight: bold;
+}
+
